@@ -8,31 +8,34 @@
     "[fullname]"
   ],
   "contact": {
-    "homepage": "https://github.com/axieum/fabric-example-mod",
-    "sources": "https://github.com/axieum/fabric-example-mod",
-    "issues": "https://github.com/axieum/fabric-example-mod/issues"
+    "homepage": "https://github.com/mrsterner/morium",
+    "sources": "https://github.com/mrsterner/morium",
+    "issues": "https://github.com/mrsterner/morium/issues"
   },
   "license": "CC0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/morium/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.example.modid.Example"
+      "dev.mrsterner.morium.Morium"
+    ],
+    "client": [
+      "dev.mrsterner.morium.MoriumClient"
+    ],
+    "cardinal-components-entity": [
+      "dev.mrsterner.morium.common.registry.MoriumComponents"
+    ],
+    "modmenu": [
+      "dev.mrsterner.morium.client.compat.MoriumModMenu"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "morium.mixins.json"
   ],
   "depends": {
     "java": ">=17",
     "minecraft": "1.18.x",
     "fabricloader": ">=0.11.3",
     "fabric": "*"
-  },
-  "recommends": {
-    "modid-sub": "*"
-  },
-  "suggests": {
-    "modmenu": "*"
   }
 }
