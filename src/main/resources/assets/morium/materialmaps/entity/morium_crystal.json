@@ -1,0 +1,12 @@
+{
+  "map": [
+    {
+      "predicate": {
+        "materialPredicate": {
+          "texture": "morium:textures/block/morium_crystal.png"
+        }
+      },
+      "material": "canvas:emissive_transform"
+    }
+  ]
+}

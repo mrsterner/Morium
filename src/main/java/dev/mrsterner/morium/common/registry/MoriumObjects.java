@@ -18,13 +18,7 @@ public class MoriumObjects {
     private static final Map<Block, Identifier> BLOCKS = new LinkedHashMap<>();
     private static final Map<Item, Identifier> ITEMS = new LinkedHashMap<>();
 
-    public static final Block MORIUM_CRYSTAL_1 = register("morium_crystal_1", new MoriumCrystalBlock(FabricBlockSettings.of(Material.STONE)), true);
-    public static final Block MORIUM_CRYSTAL_2 = register("morium_crystal_2", new MoriumCrystalBlock(FabricBlockSettings.of(Material.STONE)), true);
-    public static final Block MORIUM_CRYSTAL_3 = register("morium_crystal_3", new MoriumCrystalBlock(FabricBlockSettings.of(Material.STONE)), true);
-    public static final Block MORIUM_CRYSTAL_4 = register("morium_crystal_4", new MoriumCrystalBlock(FabricBlockSettings.of(Material.STONE)), true);
-    public static final Block MORIUM_CRYSTAL_5 = register("morium_crystal_5", new MoriumCrystalBlock(FabricBlockSettings.of(Material.STONE)), true);
-    public static final Block MORIUM_CRYSTAL_6 = register("morium_crystal_6", new MoriumCrystalBlock(FabricBlockSettings.of(Material.STONE)), true);
-    public static final Block MORIUM_CRYSTAL_7 = register("morium_crystal_7", new MoriumCrystalBlock(FabricBlockSettings.of(Material.STONE)), true);
+    public static final Block MORIUM_CRYSTAL = register("morium_crystal", new MoriumCrystalBlock(FabricBlockSettings.of(Material.STONE)), true);
 
 
 

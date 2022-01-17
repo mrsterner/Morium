@@ -1,0 +1,12 @@
+{
+  "map": [
+    {
+      "predicate": {
+        "materialPredicate": {
+          "renderLayerName": "morium:moriumCrystal"
+        }
+      },
+      "material": "canvas:emissive_transform"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 package dev.mrsterner.morium.common.block;
 
-import dev.mrsterner.morium.common.block.entity.MoriumBlockEntity;
+import dev.mrsterner.morium.common.block.entity.MoriumCrystalBlockEntity;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
@@ -13,10 +13,11 @@ public class MoriumCrystalBlock extends BlockWithEntity {
         super(settings.nonOpaque().luminance(state -> 10).emissiveLighting((state, world, pos) -> true));
     }
 
+
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new MoriumBlockEntity(pos, state);
+        return new MoriumCrystalBlockEntity(pos, state);
     }
 
     @Override

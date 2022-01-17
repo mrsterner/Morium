@@ -1,7 +1,7 @@
 package dev.mrsterner.morium.common.registry;
 
 import dev.mrsterner.morium.Morium;
-import dev.mrsterner.morium.common.block.entity.MoriumBlockEntity;
+import dev.mrsterner.morium.common.block.entity.MoriumCrystalBlockEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
@@ -14,13 +14,8 @@ import java.util.Map;
 public class MoriumBlockEntityTypes {
     public static final Map<BlockEntityType<?>, Identifier> BLOCK_ENTITY_TYPES = new LinkedHashMap<>();
 
-    public static final BlockEntityType<MoriumBlockEntity> MORIUM_CRYSTAL_BLOCK_ENTITY = register("morium_crystal_block_entity", FabricBlockEntityTypeBuilder.create(MoriumBlockEntity::new,
-        MoriumObjects.MORIUM_CRYSTAL_1,
-        MoriumObjects.MORIUM_CRYSTAL_2,
-        MoriumObjects.MORIUM_CRYSTAL_3,
-        MoriumObjects.MORIUM_CRYSTAL_4,
-        MoriumObjects.MORIUM_CRYSTAL_5,
-        MoriumObjects.MORIUM_CRYSTAL_6
+    public static final BlockEntityType<MoriumCrystalBlockEntity> MORIUM_CRYSTAL_BLOCK_ENTITY = register("morium_crystal_block_entity", FabricBlockEntityTypeBuilder.create(MoriumCrystalBlockEntity::new,
+        MoriumObjects.MORIUM_CRYSTAL
     ).build(null));
 
 

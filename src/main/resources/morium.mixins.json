@@ -6,6 +6,8 @@
   "mixins": [],
   "server": [],
   "client": [
+    "RenderLayerAccessor",
+    "GameRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
