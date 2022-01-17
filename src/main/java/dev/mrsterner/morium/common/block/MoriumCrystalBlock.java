@@ -6,13 +6,20 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Random;
 
 public class MoriumCrystalBlock extends BlockWithEntity {
     public MoriumCrystalBlock(Settings settings) {
         super(settings.nonOpaque().luminance(state -> 10).emissiveLighting((state, world, pos) -> true));
     }
 
+    @Override
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        super.randomDisplayTick(state, world, pos, random);
+    }
 
     @Nullable
     @Override

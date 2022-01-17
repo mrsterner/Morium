@@ -25,6 +25,9 @@
     "cardinal-components-entity": [
       "dev.mrsterner.morium.common.registry.MoriumComponents"
     ],
+    "cardinal-components-block": [
+      "dev.mrsterner.morium.common.registry.MoriumComponents"
+    ],
     "modmenu": [
       "dev.mrsterner.morium.client.compat.MoriumModMenu"
     ]

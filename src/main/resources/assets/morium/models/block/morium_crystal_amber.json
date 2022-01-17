@@ -1,0 +1,6 @@
+{
+	"texture_size": [32, 32],
+	"textures": {
+		"particle": "morium:block/morium_crystal_amber"
+	}
+}

@@ -12,17 +12,14 @@ import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 public class MoriumClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        /*
-        BlockRenderLayerMapImpl.INSTANCE.putBlock(MoriumObjects.MORIUM_CRYSTAL_1, RenderLayer.getTranslucent());
-        BlockRenderLayerMapImpl.INSTANCE.putBlock(MoriumObjects.MORIUM_CRYSTAL_2, RenderLayer.getTranslucent());
-        BlockRenderLayerMapImpl.INSTANCE.putBlock(MoriumObjects.MORIUM_CRYSTAL_3, RenderLayer.getTranslucent());
-        BlockRenderLayerMapImpl.INSTANCE.putBlock(MoriumObjects.MORIUM_CRYSTAL_4, RenderLayer.getTranslucent());
-        BlockRenderLayerMapImpl.INSTANCE.putBlock(MoriumObjects.MORIUM_CRYSTAL_5, RenderLayer.getTranslucent());
-        BlockRenderLayerMapImpl.INSTANCE.putBlock(MoriumObjects.MORIUM_CRYSTAL_6, RenderLayer.getTranslucent());
-        BlockRenderLayerMapImpl.INSTANCE.putBlock(MoriumObjects.MORIUM_CRYSTAL_7, RenderLayer.getTranslucent());
 
-         */
         BlockEntityRendererRegistry.register(MoriumBlockEntityTypes.MORIUM_CRYSTAL_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new MoriumCrystalRenderer());
-        BlockRenderLayerMapImpl.INSTANCE.putBlock(MoriumObjects.MORIUM_CRYSTAL, RenderLayer.getCutout());
+        BlockRenderLayerMapImpl.INSTANCE.putBlock(MoriumObjects.MORIUM_CRYSTAL_AMBER, RenderLayer.getCutout());
+        BlockRenderLayerMapImpl.INSTANCE.putBlock(MoriumObjects.MORIUM_CRYSTAL_CARNATION, RenderLayer.getCutout());
+        BlockRenderLayerMapImpl.INSTANCE.putBlock(MoriumObjects.MORIUM_CRYSTAL_CERISE, RenderLayer.getCutout());
+        BlockRenderLayerMapImpl.INSTANCE.putBlock(MoriumObjects.MORIUM_CRYSTAL_CRIMSON, RenderLayer.getCutout());
+        BlockRenderLayerMapImpl.INSTANCE.putBlock(MoriumObjects.MORIUM_CRYSTAL_OCHRE, RenderLayer.getCutout());
+        BlockRenderLayerMapImpl.INSTANCE.putBlock(MoriumObjects.MORIUM_CRYSTAL_OLYMPIC, RenderLayer.getCutout());
+        BlockRenderLayerMapImpl.INSTANCE.putBlock(MoriumObjects.MORIUM_CRYSTAL_SHAMROCK, RenderLayer.getCutout());
     }
 }

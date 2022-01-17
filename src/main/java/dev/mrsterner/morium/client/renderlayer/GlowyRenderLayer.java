@@ -26,11 +26,11 @@ public class GlowyRenderLayer extends RenderLayer {
             .shader(new RenderPhase.Shader(MoriumShader::moriumCrystal))
             .texture(new RenderPhase.Texture(texture, false, false))
             .transparency(TRANSLUCENT_TRANSPARENCY)
-            .cull(ENABLE_CULLING)
+            .cull(DISABLE_CULLING)
             .lightmap(RenderLayer.ENABLE_LIGHTMAP)
             .overlay(RenderLayer.DISABLE_OVERLAY_COLOR)
             .layering(RenderLayer.NO_LAYERING)
-            .build(true);
+            .build(false);
         return makeLayer(Morium.MODID + "moriumCrystal", VertexFormats.POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, VertexFormat.DrawMode.QUADS, 256, true, true, glState);
     });
 

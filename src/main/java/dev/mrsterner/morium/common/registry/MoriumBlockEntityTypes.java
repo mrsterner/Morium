@@ -15,7 +15,7 @@ public class MoriumBlockEntityTypes {
     public static final Map<BlockEntityType<?>, Identifier> BLOCK_ENTITY_TYPES = new LinkedHashMap<>();
 
     public static final BlockEntityType<MoriumCrystalBlockEntity> MORIUM_CRYSTAL_BLOCK_ENTITY = register("morium_crystal_block_entity", FabricBlockEntityTypeBuilder.create(MoriumCrystalBlockEntity::new,
-        MoriumObjects.MORIUM_CRYSTAL
+        MoriumObjects.MORIUM_CRYSTAL_AMBER,MoriumObjects.MORIUM_CRYSTAL_CERISE, MoriumObjects.MORIUM_CRYSTAL_CRIMSON, MoriumObjects.MORIUM_CRYSTAL_OLYMPIC, MoriumObjects.MORIUM_CRYSTAL_SHAMROCK, MoriumObjects.MORIUM_CRYSTAL_CARNATION, MoriumObjects.MORIUM_CRYSTAL_OCHRE
     ).build(null));
 
 

@@ -25,7 +25,7 @@ public class MoriumCrystalModel extends AnimatedGeoModel<MoriumCrystalBlockEntit
 
     @Override
     public Identifier getTextureLocation(MoriumCrystalBlockEntity object) {
-        return new Identifier(Morium.MODID, "textures/block/"+getEntity((MoriumCrystalBlock) object.getCachedState().getBlock())+"_1.png");
+        return new Identifier(Morium.MODID, "textures/block/"+getEntity((MoriumCrystalBlock) object.getCachedState().getBlock())+".png");
     }
 
     @Override
