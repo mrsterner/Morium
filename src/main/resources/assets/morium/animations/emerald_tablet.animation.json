@@ -32,18 +32,34 @@
 		},
 		"animation.emerald_tablet.hover_stop": {
 			"loop": true,
+			"animation_length": 1.04,
 			"bones": {
 				"axis": {
 					"rotation": {
-						"vector": [0, "query.rotation", 0]
+						"0.0": {
+							"vector": [0, "query.rotation", 0]
+						},
+						"1.04": {
+							"vector": [0, "query.rotation", 0]
+						}
 					},
 					"position": {
-						"vector": [0, 7, 0]
+						"0.0": {
+							"vector": [0, 7, 0]
+						},
+						"1.04": {
+							"vector": [0, 7, 0]
+						}
 					}
 				},
 				"emerald": {
 					"rotation": {
-						"vector": [75, 0, 0]
+						"0.0": {
+							"vector": [75, 0, 0]
+						},
+						"1.04": {
+							"vector": [75, 0, 0]
+						}
 					}
 				}
 			}

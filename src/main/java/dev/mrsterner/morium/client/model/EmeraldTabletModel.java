@@ -39,6 +39,15 @@ public class EmeraldTabletModel extends AnimatedGeoModel<EmeraldTabletBlockEntit
         super.setMolangQueries(animatable, currentTick);
         MolangParser parser = GeckoLibCache.getInstance().parser;
         EmeraldTabletBlockEntity emeraldTabletBlockEntity = (EmeraldTabletBlockEntity)animatable;
-        parser.setValue("query.rotation", currentTick);
+        float h;
+        for(h = emeraldTabletBlockEntity.floppity - emeraldTabletBlockEntity.tabletRotation; h >= 3.1415927F; h -= 6.2831855F) {
+        }
+
+        while(h < -3.1415927F) {
+            h += 6.2831855F;
+        }
+        float k = emeraldTabletBlockEntity.tabletRotation + h * emeraldTabletBlockEntity.partial;
+        parser.setValue("query.rotation", (k*180/3.1415927) + 90);
+
     }
 }

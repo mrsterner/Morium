@@ -22,4 +22,12 @@ public class EmeraldTabletRenderer extends GeoBlockRenderer<EmeraldTabletBlockEn
     public RenderLayer getRenderType(EmeraldTabletBlockEntity animatable, float partialTicks, MatrixStack stack, VertexConsumerProvider renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn, Identifier textureLocation) {
         return GlowyRenderLayer.getMoriumLayer(getTextureLocation(animatable));
     }
+
+    @Override
+    public void render(BlockEntity tile, float partialTicks, MatrixStack matrixStackIn, VertexConsumerProvider bufferIn, int combinedLightIn, int combinedOverlayIn) {
+        super.render(tile, partialTicks, matrixStackIn, bufferIn, combinedLightIn, combinedOverlayIn);
+        if(tile instanceof EmeraldTabletBlockEntity emeraldTabletBlockEntity){
+            emeraldTabletBlockEntity.partial = partialTicks;
+        }
+    }
 }
