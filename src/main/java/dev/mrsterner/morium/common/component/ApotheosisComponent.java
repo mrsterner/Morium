@@ -18,9 +18,9 @@ import java.util.UUID;
 
 public class ApotheosisComponent implements AutoSyncedComponent, ServerTickingComponent {
     private final PlayerEntity player;
-    private int MAX_LEVEL = 20;
-    private int MIN_LEVEL = -20;
-    private HashMap<UUID, Integer> villagerEntityList ;
+    private final int MAX_LEVEL = 20;
+    private final int MIN_LEVEL = -20;
+    private HashMap<UUID, Integer> villagerEntityList = new HashMap<>();
     public ApotheosisComponent(PlayerEntity player){
         this.player = player;
     }

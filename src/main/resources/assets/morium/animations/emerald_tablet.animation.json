@@ -1,0 +1,53 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.emerald_tablet.idle": {
+			"loop": true
+		},
+		"animation.emerald_tablet.hover": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"axis": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"2.0": {
+							"vector": [0, 7, 0]
+						}
+					}
+				},
+				"emerald": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"2.0": {
+							"vector": [75, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.emerald_tablet.hover_stop": {
+			"loop": true,
+			"bones": {
+				"axis": {
+					"rotation": {
+						"vector": [0, "query.rotation", 0]
+					},
+					"position": {
+						"vector": [0, 7, 0]
+					}
+				},
+				"emerald": {
+					"rotation": {
+						"vector": [75, 0, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}
