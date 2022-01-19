@@ -3,7 +3,6 @@ package dev.mrsterner.morium.common.block.entity;
 import dev.mrsterner.morium.common.registry.MoriumBlockEntityTypes;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.client.render.block.entity.EnchantingTableBlockEntityRenderer;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -21,7 +20,6 @@ public class EmeraldTabletBlockEntity extends BlockEntity implements IAnimatable
     public boolean hasPlayer;
     AnimationFactory factory = new AnimationFactory(this);
     public float tabletRotation;
-    public int ticks;
     public float flippity;
     public float floppity;
     public EmeraldTabletBlockEntity(BlockPos pos, BlockState state) {
@@ -63,7 +61,6 @@ public class EmeraldTabletBlockEntity extends BlockEntity implements IAnimatable
             d += 6.2831855F;
         }
         blockEntity.floppity += d * 0.4F;
-        ++blockEntity.ticks;
     }
 
 

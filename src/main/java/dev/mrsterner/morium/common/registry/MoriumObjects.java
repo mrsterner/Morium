@@ -2,6 +2,7 @@ package dev.mrsterner.morium.common.registry;
 
 import dev.mrsterner.morium.Morium;
 import dev.mrsterner.morium.common.block.EmeraldTabletBlock;
+import dev.mrsterner.morium.common.block.JarBlock;
 import dev.mrsterner.morium.common.block.MoriumCrystalBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -28,6 +29,7 @@ public class MoriumObjects {
     public static final Block MORIUM_CRYSTAL_OCHRE = register("morium_crystal_ochre", new MoriumCrystalBlock(FabricBlockSettings.of(Material.STONE)), true);
 
     public static final Block EMERALD_TABLET = register("emerald_tablet", new EmeraldTabletBlock(FabricBlockSettings.of(Material.STONE)), true);
+    public static final Block JAR = register("jar", new JarBlock(FabricBlockSettings.of(Material.STONE)), true);
 
 
 

@@ -2,10 +2,8 @@ package dev.mrsterner.morium.client.model;
 
 
 import dev.mrsterner.morium.Morium;
-import dev.mrsterner.morium.common.block.MoriumCrystalBlock;
 import dev.mrsterner.morium.common.block.entity.MoriumCrystalBlockEntity;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.registry.Registry;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
@@ -14,8 +12,8 @@ import software.bernie.shadowed.eliotlash.molang.MolangParser;
 
 public class MoriumCrystalModel extends AnimatedGeoModel<MoriumCrystalBlockEntity> {
 
-    public String getEntity(MoriumCrystalBlock bearTrapBlockEntity){
-        return Registry.BLOCK.getKey(bearTrapBlockEntity).get().getValue().getPath();
+    public String getBlockFromEntity(MoriumCrystalBlockEntity moriumCrystalBlockEntity){
+        return Registry.BLOCK.getKey(moriumCrystalBlockEntity.getCachedState().getBlock()).get().getValue().getPath();
     }
 
     @Override
@@ -25,7 +23,7 @@ public class MoriumCrystalModel extends AnimatedGeoModel<MoriumCrystalBlockEntit
 
     @Override
     public Identifier getTextureLocation(MoriumCrystalBlockEntity object) {
-        return new Identifier(Morium.MODID, "textures/block/"+getEntity((MoriumCrystalBlock) object.getCachedState().getBlock())+".png");
+        return new Identifier(Morium.MODID, "textures/block/"+getBlockFromEntity(object)+".png");
     }
 
     @Override

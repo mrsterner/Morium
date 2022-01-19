@@ -1,7 +1,7 @@
 package dev.mrsterner.morium.client.renderer;
 
 import dev.mrsterner.morium.client.model.MoriumCrystalModel;
-import dev.mrsterner.morium.client.renderlayer.GlowyRenderLayer;
+import dev.mrsterner.morium.client.renderlayer.MoriumRenderLayer;
 import dev.mrsterner.morium.common.block.entity.MoriumCrystalBlockEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.client.render.RenderLayer;
@@ -18,7 +18,7 @@ public class MoriumCrystalRenderer extends GeoBlockRenderer<MoriumCrystalBlockEn
 
     @Override
     public RenderLayer getRenderType(MoriumCrystalBlockEntity animatable, float partialTicks, MatrixStack stack, VertexConsumerProvider renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn, Identifier textureLocation) {
-        return GlowyRenderLayer.getMoriumLayer(getTextureLocation(animatable));
+        return MoriumRenderLayer.getMoriumLayer(getTextureLocation(animatable));
     }
 
     @Override

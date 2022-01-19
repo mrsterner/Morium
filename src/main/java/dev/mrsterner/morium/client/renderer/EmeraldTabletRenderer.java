@@ -1,10 +1,8 @@
 package dev.mrsterner.morium.client.renderer;
 
 import dev.mrsterner.morium.client.model.EmeraldTabletModel;
-import dev.mrsterner.morium.client.model.MoriumCrystalModel;
-import dev.mrsterner.morium.client.renderlayer.GlowyRenderLayer;
+import dev.mrsterner.morium.client.renderlayer.MoriumRenderLayer;
 import dev.mrsterner.morium.common.block.entity.EmeraldTabletBlockEntity;
-import dev.mrsterner.morium.common.block.entity.MoriumCrystalBlockEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
@@ -20,7 +18,7 @@ public class EmeraldTabletRenderer extends GeoBlockRenderer<EmeraldTabletBlockEn
 
     @Override
     public RenderLayer getRenderType(EmeraldTabletBlockEntity animatable, float partialTicks, MatrixStack stack, VertexConsumerProvider renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn, Identifier textureLocation) {
-        return GlowyRenderLayer.getMoriumLayer(getTextureLocation(animatable));
+        return MoriumRenderLayer.getMoriumLayer(getTextureLocation(animatable));
     }
 
     @Override

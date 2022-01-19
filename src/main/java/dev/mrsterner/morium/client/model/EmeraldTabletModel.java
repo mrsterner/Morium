@@ -2,10 +2,7 @@ package dev.mrsterner.morium.client.model;
 
 
 import dev.mrsterner.morium.Morium;
-import dev.mrsterner.morium.common.block.EmeraldTabletBlock;
-import dev.mrsterner.morium.common.block.MoriumCrystalBlock;
 import dev.mrsterner.morium.common.block.entity.EmeraldTabletBlockEntity;
-import dev.mrsterner.morium.common.block.entity.MoriumCrystalBlockEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -15,8 +12,8 @@ import software.bernie.shadowed.eliotlash.molang.MolangParser;
 
 public class EmeraldTabletModel extends AnimatedGeoModel<EmeraldTabletBlockEntity> {
 
-    public String getEntity(EmeraldTabletBlock emeraldTabletBlock){
-        return Registry.BLOCK.getKey(emeraldTabletBlock).get().getValue().getPath();
+    public String getBlockFromEntity(EmeraldTabletBlockEntity emeraldTabletBlockEntity){
+        return Registry.BLOCK.getKey(emeraldTabletBlockEntity.getCachedState().getBlock()).get().getValue().getPath();
     }
 
     @Override
@@ -26,7 +23,7 @@ public class EmeraldTabletModel extends AnimatedGeoModel<EmeraldTabletBlockEntit
 
     @Override
     public Identifier getTextureLocation(EmeraldTabletBlockEntity object) {
-        return new Identifier(Morium.MODID, "textures/block/"+getEntity((EmeraldTabletBlock) object.getCachedState().getBlock())+".png");
+        return new Identifier(Morium.MODID, "textures/block/"+getBlockFromEntity(object)+".png");
     }
 
     @Override
