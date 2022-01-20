@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "alchrimea:block/cedar_planks"
+  }
+}

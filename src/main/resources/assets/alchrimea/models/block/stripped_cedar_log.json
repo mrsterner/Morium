@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "alchrimea:block/cedar_log_top",
+    "side": "alchrimea:block/stripped_cedar_log"
+  }
+}

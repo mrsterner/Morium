@@ -3,7 +3,7 @@ plugins {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/morium.accesswiderner")
+    accessWidenerPath = file("src/main/resources/alchrimea.accesswiderner")
 }
 
 allprojects {

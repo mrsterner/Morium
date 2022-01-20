@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "alchrimea:block/cedar_sapling"
+  }
+}

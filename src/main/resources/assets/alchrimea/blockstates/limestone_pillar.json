@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "pillartype=top": {
+      "model": "alchrimea:block/limestone_pillar_top"
+    },
+    "pillartype=middle": {
+      "model": "alchrimea:block/limestone_pillar_middle"
+    },
+    "pillartype=bottom": {
+      "model": "alchrimea:block/limestone_pillar_bottom"
+    },
+    "pillartype=solo": {
+      "model": "alchrimea:block/limestone_pillar"
+    }
+  }
+}

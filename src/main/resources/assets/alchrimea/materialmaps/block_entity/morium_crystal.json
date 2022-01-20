@@ -1,0 +1,12 @@
+{
+  "map": [
+    {
+      "predicate": {
+        "materialPredicate": {
+          "renderLayerName": "alchrimea:alchrimeaCrystal"
+        }
+      },
+      "material": "canvas:emissive_transform"
+    }
+  ]
+}

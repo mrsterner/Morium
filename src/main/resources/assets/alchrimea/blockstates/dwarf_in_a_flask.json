@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "alchrimea:block/dwarf_in_a_flask",
+      "y":  90
+    },
+    "facing=north": {
+      "model": "alchrimea:block/dwarf_in_a_flask"
+    },
+    "facing=west": {
+      "model": "alchrimea:block/dwarf_in_a_flask",
+      "y":  270
+    },
+    "facing=south": {
+      "model": "alchrimea:block/dwarf_in_a_flask",
+      "y":  180
+    }
+  }
+}

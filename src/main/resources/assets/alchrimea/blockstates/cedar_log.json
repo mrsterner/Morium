@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "alchrimea:block/cedar_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "alchrimea:block/cedar_log"
+    },
+    "axis=z": {
+      "model": "alchrimea:block/cedar_log_horizontal",
+      "x": 90
+    }
+  }
+}

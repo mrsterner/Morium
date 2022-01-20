@@ -1,0 +1,32 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.mrsterner.alchrimea.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "ServerPlayerInteractionManagerMixin",
+    "BlockEntityTypeMixin",
+    "BlocksMixin",
+    "PlayerEntityMixin",
+    "SimpleBlockStateProviderMixin"
+  ],
+  "server": [
+
+  ],
+  "client": [
+    "RenderLayerAccessor",
+    "GameRendererMixin",
+    "BipedEntityModelMixin",
+    "LivingEntityRendererMixin",
+    "PlayerEntityRendererMixin",
+    "SignBlockEntityRendererMixin",
+    "SignEditScreenMixin",
+    "TexturedRenderLayersMixin",
+    "ItemInHandRendererMixin",
+    "PlayerScreenHandlerMixin",
+    "HeldItemFeatureRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

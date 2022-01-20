@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "alchrimea:cedar_log",
+    "alchrimea:cedar_wood",
+    "alchrimea:stripped_cedar_log",
+    "alchrimea:stripped_cedar_wood"
+  ]
+}

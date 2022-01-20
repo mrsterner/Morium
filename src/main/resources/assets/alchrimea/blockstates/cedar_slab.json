@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "alchrimea:block/cedar_slab"
+    },
+    "type=double": {
+      "model": "alchrimea:block/cedar_planks"
+    },
+    "type=top": {
+      "model": "alchrimea:block/cedar_slab_top"
+    }
+  }
+}

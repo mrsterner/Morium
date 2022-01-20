@@ -8,32 +8,32 @@
     "[fullname]"
   ],
   "contact": {
-    "homepage": "https://github.com/mrsterner/morium",
-    "sources": "https://github.com/mrsterner/morium",
-    "issues": "https://github.com/mrsterner/morium/issues"
+    "homepage": "https://github.com/mrsterner/alchrimea",
+    "sources": "https://github.com/mrsterner/alchrimea",
+    "issues": "https://github.com/mrsterner/alchrimea/issues"
   },
   "license": "CC0",
-  "icon": "assets/morium/icon.png",
+  "icon": "assets/alchrimea/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.mrsterner.morium.Morium"
+      "dev.mrsterner.alchrimea.Alchrimea"
     ],
     "client": [
-      "dev.mrsterner.morium.MoriumClient"
+      "dev.mrsterner.alchrimea.AlchrimeaClient"
     ],
     "cardinal-components-entity": [
-      "dev.mrsterner.morium.common.registry.MoriumComponents"
+      "dev.mrsterner.alchrimea.common.registry.AlchrimeaComponents"
     ],
     "cardinal-components-block": [
-      "dev.mrsterner.morium.common.registry.MoriumComponents"
+      "dev.mrsterner.alchrimea.common.registry.AlchrimeaComponents"
     ],
     "modmenu": [
-      "dev.mrsterner.morium.client.compat.MoriumModMenu"
+      "dev.mrsterner.alchrimea.client.compat.AlchrimeaModMenu"
     ]
   },
   "mixins": [
-    "morium.mixins.json"
+    "alchrimea.mixins.json"
   ],
   "depends": {
     "java": ">=17",
@@ -43,8 +43,10 @@
   },
   "custom": {
     "cardinal-components": [
-      "morium:apotheosis",
-      "morium:morium"
+      "alchrimea:apotheosis",
+      "alchrimea:alchrimea",
+      "alchrimea:body",
+      "alchrimea:mind"
     ]
   }
 }
