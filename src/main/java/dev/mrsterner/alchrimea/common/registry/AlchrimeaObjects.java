@@ -91,7 +91,7 @@ public class AlchrimeaObjects {
     public static final Block MORIUM_CRYSTAL_OCHRE = register("morium_crystal_ochre", new MoriumCrystalBlock(FabricBlockSettings.of(Material.STONE)), true);
 
     public static final Block EMERALD_TABLET = register("emerald_tablet", new EmeraldTabletBlock(FabricBlockSettings.of(Material.STONE)), true);
-    public static final Block JAR = register("jar", new JarBlock(FabricBlockSettings.of(Material.STONE)), true);
+    public static final Block JAR = registerBlockItem("jar", new JarBlock(FabricBlockSettings.of(Material.STONE)), true);
 
 
 

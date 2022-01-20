@@ -6,7 +6,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 
-public class JarModel extends AnimatedGeoModel<JarBlockEntity> {
+public class JarBlockModel extends AnimatedGeoModel<JarBlockEntity> {
 
     public String getBlockFromEntity(JarBlockEntity jarBlockEntity){
         return Registry.BLOCK.getKey(jarBlockEntity.getCachedState().getBlock()).get().getValue().getPath();

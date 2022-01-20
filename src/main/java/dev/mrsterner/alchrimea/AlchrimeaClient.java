@@ -34,6 +34,7 @@ public class AlchrimeaClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         GeoItemRenderer.registerItemRenderer(AlchrimeaObjects.DWARF_IN_A_FLASK_BLOCK.asItem(), new DwarfInAFlaskItemRenderer());
+        GeoItemRenderer.registerItemRenderer(AlchrimeaObjects.JAR.asItem(), new JarItemRenderer());
         BlockEntityRendererRegistry.register(AlchrimeaEntityTypes.DWARF_IN_A_FLASK_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new DwarfInAFlaskBlockRenderer());
         BlockRenderLayerMap.INSTANCE.putBlock(AlchrimeaObjects.DWARF_IN_A_FLASK_BLOCK, RenderLayer.getCutout());
         BlockEntityRendererRegistry.register(AlchrimeaEntityTypes.KHEMEIA_CHEST, ChestBlockEntityRenderer::new);
@@ -53,9 +54,6 @@ public class AlchrimeaClient implements ClientModInitializer {
 
         GeoItemRenderer.registerItemRenderer(AlchrimeaObjects.MAGNUM_OPUS, new MagnumOpusItemRenderer());
         EntityRendererRegistry.register(AlchrimeaEntityTypes.THE_TRUTH, TheTruthEntityRenderer::new);
-        //ClientTickEvents.END_CLIENT_TICK.register(ClientTickHandler::clientTickEnd);
-
-
 
 
         BlockEntityRendererRegistry.register(AlchrimeaEntityTypes.MORIUM_CRYSTAL_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new MoriumCrystalRenderer());

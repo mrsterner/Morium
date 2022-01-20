@@ -1,6 +1,6 @@
 package dev.mrsterner.alchrimea.client.renderer;
 
-import dev.mrsterner.alchrimea.client.model.JarModel;
+import dev.mrsterner.alchrimea.client.model.JarBlockModel;
 import dev.mrsterner.alchrimea.client.renderlayer.AlchrimeaRenderLayer;
 import dev.mrsterner.alchrimea.common.block.entity.JarBlockEntity;
 import net.minecraft.block.entity.BlockEntity;
@@ -16,7 +16,7 @@ import software.bernie.geckolib3.renderers.geo.GeoBlockRenderer;
 
 public class JarRenderer extends GeoBlockRenderer<JarBlockEntity> {
     public JarRenderer() {
-        super(new JarModel());
+        super(new JarBlockModel());
     }
 
     public String getModelPath(Item item){

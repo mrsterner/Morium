@@ -43,13 +43,13 @@ public class AlchrimeaRenderLayer extends RenderLayer {
             .overlay(RenderLayer.DISABLE_OVERLAY_COLOR)
             .layering(RenderLayer.NO_LAYERING)
             .build(false);
-        return makeLayer(dev.mrsterner.alchrimea.Alchrimea.MODID + "alchrimeaCrystal", VertexFormats.POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, VertexFormat.DrawMode.QUADS, 256, true, true, glState);
+        return makeLayer(Alchrimea.MODID + "alchrimeaCrystal", VertexFormats.POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, VertexFormat.DrawMode.QUADS, 256, true, true, glState);
     });
 
     private static final Function<Identifier, RenderLayer> JAR = Util.memoize(texture -> {
         RenderLayer.MultiPhaseParameters glState = RenderLayer.MultiPhaseParameters.builder()
             .shader(RenderLayer.ENTITY_TRANSLUCENT_SHADER)
-            .texture(new RenderPhase.Texture(texture, false, true))
+            .texture(new RenderPhase.Texture(texture, false, false))
             .transparency(RenderPhase.TRANSLUCENT_TRANSPARENCY)
             .cull(RenderPhase.ENABLE_CULLING)
             .lightmap(RenderLayer.ENABLE_LIGHTMAP)
@@ -57,8 +57,36 @@ public class AlchrimeaRenderLayer extends RenderLayer {
             .layering(RenderLayer.NO_LAYERING)
             .target(RenderLayer.ITEM_TARGET)
             .build(false);
-        return makeLayer(dev.mrsterner.alchrimea.Alchrimea.MODID + "jar", VertexFormats.POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, VertexFormat.DrawMode.QUADS, 256, true, true, glState);
+        return makeLayer(Alchrimea.MODID + "jar", VertexFormats.POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, VertexFormat.DrawMode.QUADS, 256, true, true, glState);
     });
+
+    private static final Function<Identifier, RenderLayer> JAR_ITEM = Util.memoize(texture -> {
+        RenderLayer.MultiPhaseParameters glState = RenderLayer.MultiPhaseParameters.builder()
+            .shader(RenderLayer.ENTITY_TRANSLUCENT_SHADER)
+            .texture(new RenderPhase.Texture(texture, false, false))
+            .transparency(RenderPhase.TRANSLUCENT_TRANSPARENCY)
+            .cull(RenderPhase.DISABLE_CULLING)
+            .lightmap(RenderLayer.ENABLE_LIGHTMAP)
+            .overlay(RenderLayer.ENABLE_OVERLAY_COLOR).target(RenderLayer.MAIN_TARGET)
+            .build(false);
+
+        return makeLayer(Alchrimea.MODID + "jar_item", VertexFormats.POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, VertexFormat.DrawMode.QUADS, 128, false, true, glState);
+    });
+
+    private static final Function<Identifier, RenderLayer> JAR_ITEM_2 = Util.memoize(texture -> {
+        RenderLayer.MultiPhaseParameters glState = RenderLayer.MultiPhaseParameters.builder()
+            .shader(RenderLayer.ENTITY_TRANSLUCENT_SHADER)
+            .texture(new RenderPhase.Texture(texture, false, false))
+            .transparency(RenderPhase.TRANSLUCENT_TRANSPARENCY)
+            .cull(RenderPhase.DISABLE_CULLING)
+            .lightmap(RenderLayer.ENABLE_LIGHTMAP)
+            .overlay(RenderLayer.ENABLE_OVERLAY_COLOR)
+            .target(RenderLayer.ITEM_TARGET)
+            .build(false);
+
+        return makeLayer(Alchrimea.MODID + "jar_item_2", VertexFormats.POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, VertexFormat.DrawMode.QUADS, 128, false, true, glState);
+    });
+
 
     public static RenderLayer getAlchrimeaLayer(Identifier texture) {
         return MORIUM_CRYSTAL.apply(texture);
@@ -67,6 +95,16 @@ public class AlchrimeaRenderLayer extends RenderLayer {
     public static RenderLayer getJarLayer(Identifier texture) {
         return JAR.apply(texture);
     }
+
+    public static RenderLayer getJarItemLayer(Identifier texture) {
+        return JAR_ITEM.apply(texture);
+    }
+
+    public static RenderLayer getJarItemLayer2(Identifier texture) {
+        return JAR_ITEM_2.apply(texture);
+    }
+
+
 
     public static RenderLayer getTheTruthLayer(Identifier texture) {
         return THE_TRUTH.apply(texture);

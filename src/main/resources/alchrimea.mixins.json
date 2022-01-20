@@ -24,7 +24,8 @@
     "TexturedRenderLayersMixin",
     "ItemInHandRendererMixin",
     "PlayerScreenHandlerMixin",
-    "HeldItemFeatureRendererMixin"
+    "HeldItemFeatureRendererMixin",
+    "ItemRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
