@@ -1,6 +1,6 @@
 {
 	"texture_size": [32, 32],
 	"textures": {
-		"particle": "alchrimea:block/alchrimea_crystal_ochre"
+		"particle": "alchrimea:block/morium_crystal_ochre"
 	}
 }

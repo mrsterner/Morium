@@ -3,7 +3,7 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "alchrimea:block/limestone_pillar",
-		"particle": "alchrimea:block/limestone"
+		"particle": "alchrimea:block/limestone_pillar"
 	},
 	"elements": [
 		{
@@ -15,17 +15,17 @@
 				"south": {"uv": [9, 9.5, 13, 10.25], "texture": "#0"},
 				"west": {"uv": [9, 10.25, 13, 11], "texture": "#0"},
 				"up": {"uv": [4, 4, 0, 0], "texture": "#0"},
-				"down": {"uv": [4, 4, 0, 8], "texture": "#0"}
+				"down": {"uv": [8, 0, 4, 4], "texture": "#0"}
 			}
 		},
 		{
-			"from": [2, 3, 2],
+			"from": [2, 2, 2],
 			"to": [14, 16, 14],
 			"faces": {
-				"north": {"uv": [3, 8, 6, 10.5], "texture": "#0"},
-				"east": {"uv": [8, 3, 11, 5.5], "texture": "#0"},
-				"south": {"uv": [8, 5.5, 11, 8], "texture": "#0"},
-				"west": {"uv": [6, 8, 9, 10.5], "texture": "#0"},
+				"north": {"uv": [8, 3, 11, 6.5], "texture": "#0"},
+				"east": {"uv": [8, 3, 11, 6.5], "texture": "#0"},
+				"south": {"uv": [8, 3, 11, 6.5], "texture": "#0"},
+				"west": {"uv": [8, 3, 11, 6.5], "texture": "#0"},
 				"up": {"uv": [3, 11, 0, 8], "texture": "#0"},
 				"down": {"uv": [11, 0, 8, 3], "texture": "#0"}
 			}
@@ -36,7 +36,7 @@
 			"name": "group",
 			"origin": [0, 0, 0],
 			"color": 0,
-			"children": [0, 1, 2]
+			"children": [0, 1]
 		}
 	]
 }
