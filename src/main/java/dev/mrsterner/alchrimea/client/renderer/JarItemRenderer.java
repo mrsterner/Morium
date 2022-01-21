@@ -4,6 +4,7 @@ import dev.mrsterner.alchrimea.Alchrimea;
 import dev.mrsterner.alchrimea.client.model.JarItemModel;
 import dev.mrsterner.alchrimea.client.renderlayer.AlchrimeaRenderLayer;
 import dev.mrsterner.alchrimea.common.block.AlchrimeaBlockItem;
+import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
@@ -25,8 +26,15 @@ public class JarItemRenderer extends GeoItemRenderer<AlchrimeaBlockItem> {
     private static ModelTransformation.Mode forceTransform = ModelTransformation.Mode.NONE;
     @Override
     public RenderLayer getRenderType(AlchrimeaBlockItem animatable, float partialTicks, MatrixStack stack, VertexConsumerProvider renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn, Identifier textureLocation) {
+        System.out.println(forceTransform);
+        boolean gui = forceTransform == ModelTransformation.Mode.GUI;
+        return gui ? RenderLayer.getEntityTranslucentCull(getTextureLocation(animatable)) : AlchrimeaRenderLayer.getJarGui(getTextureLocation(animatable));
+    }
 
-        return AlchrimeaRenderLayer.getJarGui(getTextureLocation(animatable));
+    @Override
+    public void render(ItemStack itemStack, ModelTransformation.Mode mode, MatrixStack matrixStackIn, VertexConsumerProvider bufferIn, int combinedLightIn, int combinedOverlayIn) {
+        forceTransform = mode;
+        super.render(itemStack, mode, matrixStackIn, bufferIn, combinedLightIn, combinedOverlayIn);
     }
 
     @Override
