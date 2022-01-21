@@ -28,7 +28,7 @@ public class JarItemRenderer extends GeoItemRenderer<AlchrimeaBlockItem> {
     public RenderLayer getRenderType(AlchrimeaBlockItem animatable, float partialTicks, MatrixStack stack, VertexConsumerProvider renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn, Identifier textureLocation) {
         System.out.println(forceTransform);
         boolean gui = forceTransform == ModelTransformation.Mode.GUI;
-        return gui ? RenderLayer.getEntityTranslucentCull(getTextureLocation(animatable)) : AlchrimeaRenderLayer.getJarGui(getTextureLocation(animatable));
+        return gui ? AlchrimeaRenderLayer.getJarGui(getTextureLocation(animatable)) : AlchrimeaRenderLayer.getJarFps(getTextureLocation(animatable));
     }
 
     @Override
