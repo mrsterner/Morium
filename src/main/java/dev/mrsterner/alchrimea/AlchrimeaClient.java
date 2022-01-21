@@ -66,6 +66,6 @@ public class AlchrimeaClient implements ClientModInitializer {
         BlockRenderLayerMapImpl.INSTANCE.putBlock(AlchrimeaObjects.MORIUM_CRYSTAL_OCHRE, RenderLayer.getCutout());
         BlockRenderLayerMapImpl.INSTANCE.putBlock(AlchrimeaObjects.MORIUM_CRYSTAL_OLYMPIC, RenderLayer.getCutout());
         BlockRenderLayerMapImpl.INSTANCE.putBlock(AlchrimeaObjects.MORIUM_CRYSTAL_SHAMROCK, RenderLayer.getCutout());
-        BlockRenderLayerMapImpl.INSTANCE.putBlock(AlchrimeaObjects.JAR, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMapImpl.INSTANCE.putBlock(AlchrimeaObjects.JAR, RenderLayer.getTranslucent());
     }
 }
